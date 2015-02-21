@@ -4,7 +4,7 @@ It's very common for a mobile application to utilize a local sqlite database. Th
 
 Sometimes we may want to create our database from scratch the first time our application runs.  Sqlite.net will automatically create the file if it doesn't exist the first time we attempt to connect to it.  We can then use the **CreateTable&lt;TModel&gt;()** method on the **SQLiteConnection** class to create our tables from our C# models.
 
-Other times, though, we will want to ship a prepopulated database with the application. We may have some lookup tables that need have records in them, or default data that the application needs in order to function. Fortunately, this is easy to accomplish as well.
+Other times though, we will want to ship a prepopulated database with the application. We may have some lookup tables that need have records in them, or default data that the application needs in order to function. Fortunately, this is easy to accomplish as well.
 
 ##The steps##
 
@@ -16,13 +16,13 @@ Other times, though, we will want to ship a prepopulated database with the appli
 
 ##Create SQLite database##
 
-![Create SQL Schema](http://arteksoftware.com/content/images/2015/02/SqlSchema.png)
+{<8>}![Create SQL Schema](http://arteksoftware.com/content/images/2015/02/SqlSchema.png)
 
 We can create a Sqlite database file using a variety of tools on both Mac and Windows. I use [DB Browser for SQLite](http://sqlitebrowser.org/), a cross platform tool which will allow us to create the database, define the schema, and add records to the database. For this example, we'll be creating a file named "**people.db3**".
 
 ##Create the Model##
 
-When using Sqlite.net, it is important that the C# models match the table definitions. If there is a discrepancy between the model and the table, we will have unexpected results. We may accidently create new tables, new columns in existing tables, or no results from queries.
+When using Sqlite.net, it's important that the C# models match the table definitions. If there is a discrepancy between the model and the table, we will have unexpected results. We may accidently create new tables, new columns in existing tables, or get no results from queries.
 
 ```language-csharp
 [Table ("people")]
@@ -38,25 +38,25 @@ public class Person
 
 ##Link database file##
 
-First we need to include the database file in each platform specific project (iOS/Android/WP8). We can keep the file anywhere on the desktop's file system. We're going to use [File Linking](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx) to include the exact same file in each project.
+Once we have created the database on our desktop, we need to include it with each platform specific project (iOS/Android/WP8). We can keep the file anywhere on the desktop's file system, although including it within our solution in source control is recommended. We're going to use [File Linking](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx) to include the *exact same file* in each project.
 
 ####iOS####
 
 For iOS, we will link the db3 file into the Resources folder. Be sure to set the Build Action to **BundleResource**.
 
-{<4>}![Link database file to iOS](http://arteksoftware.com/content/images/2015/02/IncludeIOSDb-1.png)
+{<9>}![Link database file to iOS](http://arteksoftware.com/content/images/2015/02/IncludeIOSDb-1.png)
 
 ####Android####
 
 On Android, we will link the db3 file into the Assets folder, and set the Build Action to **AndroidAsset**.
 
-{<6>}![Link database file to Android](http://arteksoftware.com/content/images/2015/02/IncludeAndroidDb.png)
+{<10>}![Link database file to Android](http://arteksoftware.com/content/images/2015/02/IncludeAndroidDb.png)
 
 ####Windows Phone 8####
 
 Windows Phone will link the database file into the root of the project, and set the Build Action as **Content**.
 
-{<7>}![Link database file to Windows Phone 8](http://arteksoftware.com/content/images/2015/02/IncludeWP8Db.png)
+{<11>}![Link database file to Windows Phone 8](http://arteksoftware.com/content/images/2015/02/IncludeWP8Db.png)
 
 ##Copy the database file##
 
@@ -211,6 +211,11 @@ public class FileAccessHelper
 }
 ```
 
+##Running the app###
+
+By including our prepopulated database with our app, we have the ability to give our users a better first run experience and minimize the amount of work that the app needs to do to be able to run for the first time.
+
+{<13>}![Included data](http://arteksoftware.com/content/images/2015/02/iOSDB.png)
 
 ###Source Code###
 

@@ -1,9 +1,9 @@
-﻿<Properties StartupItem="People/People.Droid/People.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (KitKat)" />
+﻿<Properties StartupItem="People/People.iOS/People.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.0" />
   <MonoDevelop.Ide.Workbench ActiveDocument="People/People/PersonRepository.cs">
     <Files>
-      <File FileName="People/People.Droid/FileAccessHelper.cs" Line="9" Column="9" />
-      <File FileName="People/People/PersonRepository.cs" Line="8" Column="8" />
+      <File FileName="People/People.Droid/FileAccessHelper.cs" Line="1" Column="1" />
+      <File FileName="People/People/PersonRepository.cs" Line="23" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
