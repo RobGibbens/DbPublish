@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="People/People.iOS/People.iOS.csproj">
+﻿<Properties StartupItem="People/People.Droid/People.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
