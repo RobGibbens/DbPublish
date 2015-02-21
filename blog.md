@@ -16,7 +16,7 @@ Other times, though, we will want to ship a prepopulated database with the appli
 
 ##Create SQLite database##
 
-{<1>}![Create SQL Schema](http://arteksoftware.com/content/images/2015/02/SqlSchema.png)
+![Create SQL Schema](http://arteksoftware.com/content/images/2015/02/SqlSchema.png)
 
 We can create a Sqlite database file using a variety of tools on both Mac and Windows. I use [DB Browser for SQLite](http://sqlitebrowser.org/), a cross platform tool which will allow us to create the database, define the schema, and add records to the database. For this example, we'll be creating a file named "**people.db3**".
 
