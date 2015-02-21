@@ -16,7 +16,7 @@ Other times though, we will want to ship a prepopulated database with the applic
 
 ##Create SQLite database##
 
-{<8>}![Create SQL Schema](http://arteksoftware.com/content/images/2015/02/SqlSchema.png)
+![Create SQL Schema](http://arteksoftware.com/content/images/2015/02/SqlSchema.png)
 
 We can create a Sqlite database file using a variety of tools on both Mac and Windows. I use [DB Browser for SQLite](http://sqlitebrowser.org/), a cross platform tool which will allow us to create the database, define the schema, and add records to the database. For this example, we'll be creating a file named "**people.db3**".
 
@@ -44,19 +44,19 @@ Once we have created the database on our desktop, we need to include it with eac
 
 For iOS, we will link the db3 file into the Resources folder. Be sure to set the Build Action to **BundleResource**.
 
-{<9>}![Link database file to iOS](http://arteksoftware.com/content/images/2015/02/IncludeIOSDb-1.png)
+![Link database file to iOS](http://arteksoftware.com/content/images/2015/02/IncludeIOSDb-1.png)
 
 ####Android####
 
 On Android, we will link the db3 file into the Assets folder, and set the Build Action to **AndroidAsset**.
 
-{<10>}![Link database file to Android](http://arteksoftware.com/content/images/2015/02/IncludeAndroidDb.png)
+![Link database file to Android](http://arteksoftware.com/content/images/2015/02/IncludeAndroidDb.png)
 
 ####Windows Phone 8####
 
 Windows Phone will link the database file into the root of the project, and set the Build Action as **Content**.
 
-{<11>}![Link database file to Windows Phone 8](http://arteksoftware.com/content/images/2015/02/IncludeWP8Db.png)
+![Link database file to Windows Phone 8](http://arteksoftware.com/content/images/2015/02/IncludeWP8Db.png)
 
 ##Copy the database file##
 
@@ -215,7 +215,7 @@ public class FileAccessHelper
 
 By including our prepopulated database with our app, we have the ability to give our users a better first run experience and minimize the amount of work that the app needs to do to be able to run for the first time.
 
-{<13>}![Included data](http://arteksoftware.com/content/images/2015/02/iOSDB.png)
+![Included data](http://arteksoftware.com/content/images/2015/02/iOSDB.png)
 
 ###Source Code###
 
