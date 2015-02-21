@@ -5,18 +5,18 @@ using SQLite.Net.Platform.XamarinAndroid;
 
 namespace People.Droid
 {
-	[Activity(Label = "People", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+[Activity (Label = "People", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+{
+	protected override void OnCreate (Bundle bundle)
 	{
-		protected override void OnCreate(Bundle bundle)
-		{
-			base.OnCreate(bundle);
+		base.OnCreate (bundle);
 
-			global::Xamarin.Forms.Forms.Init(this, bundle);
+		global::Xamarin.Forms.Forms.Init (this, bundle);
 
-			string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+		string dbPath = FileAccessHelper.GetLocalFilePath ("people.db3");
 
-			LoadApplication(new People.App(dbPath, new SQLitePlatformAndroid()));
-		}
+		LoadApplication (new People.App (dbPath, new SQLitePlatformAndroid ()));
 	}
+}
 }

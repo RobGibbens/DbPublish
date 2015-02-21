@@ -1,6 +1,11 @@
 ﻿<Properties StartupItem="People/People.Droid/People.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="People/People/PersonRepository.cs">
+    <Files>
+      <File FileName="People/People.Droid/FileAccessHelper.cs" Line="9" Column="9" />
+      <File FileName="People/People/PersonRepository.cs" Line="8" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

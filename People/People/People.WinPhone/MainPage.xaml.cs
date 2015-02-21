@@ -3,19 +3,19 @@ using SQLite.Net.Platform.WindowsPhone8;
 
 namespace People.WinPhone
 {
-	public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
+public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
+{
+	public MainPage ()
 	{
-		public MainPage()
-		{
-			InitializeComponent();
-	
-			SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+		InitializeComponent ();
 
-			global::Xamarin.Forms.Forms.Init();
+		SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-			string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+		global::Xamarin.Forms.Forms.Init ();
 
-			LoadApplication(new People.App(dbPath, new SQLitePlatformWP8()));
-		}
+		string dbPath = FileAccessHelper.GetLocalFilePath ("people.db3");
+
+		LoadApplication (new People.App (dbPath, new SQLitePlatformWP8 ()));
 	}
+}
 }

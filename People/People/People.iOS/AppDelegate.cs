@@ -6,18 +6,18 @@ using Xamarin.Forms.Platform.iOS;
 
 namespace People.iOS
 {
-	[Register("AppDelegate")]
-	public partial class AppDelegate : FormsApplicationDelegate
+[Register ("AppDelegate")]
+public partial class AppDelegate : FormsApplicationDelegate
+{
+	public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 	{
-		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-		{
-			Forms.Init();
+		Forms.Init ();
 
-			string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+		string dbPath = FileAccessHelper.GetLocalFilePath ("people.db3");
 
-			LoadApplication(new App(dbPath, new SQLitePlatformIOS()));
+		LoadApplication (new App (dbPath, new SQLitePlatformIOS ()));
 
-			return base.FinishedLaunching(app, options);
-		}
+		return base.FinishedLaunching (app, options);
 	}
+}
 }
