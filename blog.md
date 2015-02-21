@@ -1,6 +1,6 @@
 > *Sample code is available at [my Github repo](https://github.com/RobGibbens/DbPublish)*
 
-It's very common for a mobile application to utilize a local sqlite database. The combination of [Sqlite.net]() and Xamarin.Forms makes the [very easy](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/databases/). One of the reasons that we choose Sqlite as our mobile database is that it is single file and easily works cross platform.  The same file can be created and opened on iOS, Android, Windows, Mac, Windows Phone, and WinRT.
+It's very common for a mobile application to utilize a local sqlite database. The combination of [Sqlite.net]() and Xamarin.Forms makes this [very easy](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/databases/). One of the reasons that we choose Sqlite as our mobile database is that it is single file and easily works cross platform.  The same file can be created and opened on iOS, Android, Windows, Mac, Windows Phone, and WinRT.
 
 Sometimes we may want to create our database from scratch the first time our application runs.  Sqlite.net will automatically create the file if it doesn't exist the first time we attempt to connect to it.  We can then use the **CreateTable&lt;TModel&gt;()** method on the **SQLiteConnection** class to create our tables from our C# models.
 
